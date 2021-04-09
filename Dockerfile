@@ -1,11 +1,11 @@
 # Backend
 FROM node:14-alpine
 
-LABEL authors="Albert Iblyaminov <rieset@yandex.ru>, Max Mishin <max@mishin.io>" \
-      org.label-schema.vendor="Untld Service" \
-      org.label-schema.name="Untld Service Image" \
-      org.label-schema.description="Untld Service" \
-      org.label-schema.url="https://untld.pro" \
+LABEL authors="Albert Iblyaminov <rieset@yandex.ru>" \
+      org.label-schema.vendor="Backend Service" \
+      org.label-schema.name="Backend Service Image" \
+      org.label-schema.description="Backend Service" \
+      org.label-schema.url="https://site.ru" \
       org.label-schema.schema-version="1.0"
 
 ENV NODE_ENV="production" \
@@ -16,7 +16,6 @@ ENV NODE_ENV="production" \
     LABEL="Untld backend" \
     BUILD_DEPS="python make build-base gcc autoconf automake zlib-dev libpng-dev nasm bash" \
     RUNTIME_DEPS="" \
-#    RUNTIME_DEPS="chromium nss freetype freetype-dev harfbuzz ca-certificates ttf-freefont" \
     NODE_OPTIONS="--max_old_space_size=2048"
 
 RUN set -x && \
